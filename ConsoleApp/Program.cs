@@ -17,10 +17,11 @@ namespace ConsoleApp
             for (int i = 0; i < N; i++)
             {
                 shop[i] = new Shop();
-                shop[i].enter();
+                shop[i].init("1", "2", "3", "10:00-20:00");
                 shop[i].print();
                 shop[i].cloakShop();
             }
+            Shop.CountOfShop();
             Warehouse home = new Warehouse();
             home.enter();
             home.print();

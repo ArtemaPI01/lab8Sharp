@@ -6,10 +6,21 @@ namespace ConsoleApp
 {
     class Shop
     {
+        private static int counter;
         private string name;
         private string type;
         private string street;
         private string time;
+
+        public Shop()
+        {
+            counter++;
+        }
+        ~Shop()
+        {
+            counter--;
+        }
+
         public void init(string name, string type, string street, string time)
         {
             this.name = name;
@@ -18,11 +29,20 @@ namespace ConsoleApp
             this.time = time;
         }
 
+        public static int Counter
+        {
+            get;
+            private set;
+        } 
+
+        public static void CountOfShop()
+        {
+            Console.WriteLine($"Кол-во магазинов: {counter}.\n");
+        }
         public string Name { get; set; }
         public string Type { get; set; }
         public string Street { get; set; }
         public string Time { get; set; }
-
         public void enter()
         {
             Console.Write("Введите название:");

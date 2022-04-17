@@ -6,7 +6,7 @@ namespace ConsoleApp
 {
     class Owner
     {
-        FIO fio;
+        private FIO fio;
         private int income;
         private int expenses;
 
